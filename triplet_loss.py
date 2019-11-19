@@ -161,7 +161,7 @@ def _get_triplet_mask(labels):
     return valid_labels & distinct_indices
 
 
-def _get_anchor_positive_triplet_mask(labels, device):
+def _get_anchor_positive_triplet_mask(labels, device='cpu'):
     """Return a 2D mask where mask[a, p] is True iff a and p are distinct and have same label.
     Args:
         labels: tf.int32 `Tensor` with shape [batch_size]
